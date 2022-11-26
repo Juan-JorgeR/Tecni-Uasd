@@ -82,12 +82,153 @@
                     </ul>
                 </ul>
             </aside>
-            <section>
-                <?php
+            <section id="seccion_principal">
+                <!--Consultas-->
+                <!--descripcion equipos-->
+                <form class="formulario" id="descripcion_equipos_form">
+                    <p id="titulo">Descripcion De Los Equipos</p>
+                    <p><input placeholder="Nombre" id="descripcion_equipos_nombre"></p>
+                    <p><select name="marca">
+                        <option value="">--Marca--</option>
+                    </select></p>
+                    <input type="submit" value="Actualizar" class="actualizar">
+                </form>
+                <!--Estatus cuentas por cobrar a credito-->
+                <form class="formulario" id="estatus_cuentas_por_cobrar_credito_form">
+                    <p id="titulo">Estatus Cuentas Por Cobrar A Credito</p>
+                    <p><input placeholder="Cedula" id="estatus_cuentas_por_cobrar_credito_cedula"></p>
+                    <input type="submit" value="Actualizar" class="actualizar">
+                </form>
+                <!--Existencia de garantia-->
+                <form class="formulario" id="existencia_de_garantia_form">
+                    <p id="titulo">Existencia De Garantia</p>
+                    <p><input placeholder="Nombre" id="existencia_de_garantia_nombre"></p>
+                    <p><select name="marca">
+                        <option value="">--Marca--</option>
+                    </select></p>
+                    <input type="submit" value="Actualizar" class="actualizar">
+                </form>
+                <!--garantia por clientes-->
+                <form class="formulario" id="garantia_por_clientes_form">
+                    <p id="titulo">Garantia Por Cliente</p>
+                    <p><input placeholder="Cedula" id="garantia_por_clientes_cedula"></p>
+                    <input type="submit" value="Actualizar" class="actualizar">
+                </form>
+                <!--Informacion tecnica del producto-->
+                <form class="formulario" id="informacion_tecnica_del_producto_form">
+                    <p id="titulo">Informacion Tecnica Del Producto</p>
+                    <p><input placeholder="Nombre" id="informacion_tecnica_del_producto_nombre"></p>
+                    <p><select name="marca">
+                        <option value="">--Marca--</option>
+                    </select></p>
+                    <input type="submit" value="Actualizar" class="actualizar">
+                </form>
 
-                ?>
+                <!--Informes-->
+                <!--Informe equipos vendidos por vendedor-->
+                <form class="formulario" id="informe_equipos_vendidos_por_vendedor_form">
+                    <p id="titulo">Informe Equipos Vendidos Por Vendedor</p>
+                    <p><select name="meses">
+                        <option value="">--Meses--</option>
+                    </select></p>
+                    <p><input placeholder="Cedula" id="informe_equipos_vendidos_por_vendedor_cedula"></p>
+                    <input type="submit" value="Actualizar" class="actualizar">
+                </form>
+                <!--Informe facturas mensuales-->
+                <form class="formulario" id="informe_facturas_mensuales_form">
+                    <p id="titulo">Informe Facturas Mensuales</p>
+                    <p><select name="meses">
+                        <option value="">--Meses--</option>
+                    </select></p>
+                    <input type="submit" value="Actualizar" class="actualizar">
+                </form>
+                <!--Informes ventas al contado-->
+                <form class="formulario" id="informes_ventas_al_contado_form">
+                    <p id="titulo">Informe Ventas Al Contado</p>  
+                    <p><select name="meses">
+                        <option value="">--Meses--</option>
+                    </select></p>                 
+                    <input type="submit" value="Actualizar" class="actualizar">
+                </form>
+                <!--Informe ventas a credito-->
+                <form class="formulario" id="informe_ventas_a_credito_form">
+                    <p id="titulo">Informe Ventas A Credito</p> 
+                    <p><select name="meses">
+                        <option value="">--Meses--</option>
+                    </select></p>
+                    <input type="submit" value="Actualizar" class="actualizar">
+                </form>
+
+                <!--Formularios-->
+                <!--cliente-->
+                <form class="formulario" id="cliente_form">
+                    <p id="titulo">Cliente</p> 
+                    <p><input placeholder="Nombre" id="cliente_nombre"></p>
+                    <p><input placeholder="Apellido" id="cliente_apellido"></p>
+                    <p><input placeholder="Cedula" id="cliente_cedula"></p>
+                    <input type="submit" value="Actualizar" class="actualizar">
+                </form>
+                <!--factura-->
+                <form class="formulario" id="factura_form">
+                    <p id="titulo">Factura</p> 
+                    <p><input placeholder="Cedula Cliente" id="factura_cedula_cliente"></p>
+                    <p><select name="vendedor">
+                        <option value="">--Vendedor--</option>
+                    </select></p>
+                    <p><select name="equipo">
+                        <option value="">--Equipo--</option>
+                    </select></p>
+                    <p><input placeholder="Monto" id="factura_monto"></p>
+                    <p><select name="tipoVenta">
+                        <option value="">--Tipo Venta--</option>
+                    </select></p>
+                    <input type="submit" value="Actualizar" class="actualizar">
+                </form>
+                <!--garantia-->
+                <form class="formulario" id="garantia_form">
+                    <p id="titulo">Garantia</p> 
+                    <p><input placeholder="Meses garantia" id="garantia_meses"></p>
+                    <input type="submit" value="Actualizar" class="actualizar">
+                </form>
+
+                <!--vendedor-->
+                <form class="formulario" id="vendedor_form">
+                    <p id="titulo">Vendedor</p> 
+                    <p><input placeholder="Nombre" id="vendedor_nombre"></p>
+                    <p><input placeholder="Apellido" id="vendedor_apellido"></p>
+                    <p><input placeholder="Cedula" id="vendedor_cedula"></p>
+                    <input type="submit" value="Actualizar" class="actualizar">
+                </form>
+                <!--marca-->
+                <form class="formulario" id="marca_form">
+                    <p id="titulo">Marca</p> 
+                    <p><input placeholder="Nombre" id="marca_nombre"></p>
+                    <input type="submit" value="Actualizar" class="actualizar">
+                </form>
+                <!--equipos-->
+                <form class="formulario" id="equipos_form">
+                    <p id="titulo">Equipos</p> 
+                    <p><input placeholder="Nombre" id="equipos_nombre"></p>
+                    <p><input placeholder="Precio" id="equipos_precio"></p>
+                    <p><select name="proveedor">
+                        <option value="">--Proveedor--</option>
+                    </select></p>
+                    <p><select name="marca">
+                        <option value="">--Marca--</option>
+                    </select></p>
+                    <p><select name="garantia">
+                        <option value="">--garantia--</option>
+                    </select></p>
+                    <input type="submit" value="Actualizar" class="actualizar">
+                </form>
+                <!--proveedor-->
+                <form class="formulario" id="proveedor_form">
+                    <p id="titulo">Proveedor</p> 
+                    <p><input placeholder="Nombre" id="proveedor_nombre"></p>
+                    <input type="submit" value="Actualizar" class="actualizar">
+                </form>
             </section>
         </main>
     </body>
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" type="module"></script>
 </html>
