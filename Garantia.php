@@ -1,10 +1,11 @@
 <?php 
     include_once('./DataBase.php');
-    $meses=$_POST['meses'];
-
-    $query='call set_garantia('.$meses.')';
+    
     function consultar() {
-        echo $GLOBALS['query'];
+        $meses=$_POST['meses'];
+
+        $query='call set_garantia("'.$meses.'")';
+        $result = $GLOBALS['mysqli']->query($query); 
     }
     consultar();
 ?>

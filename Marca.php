@@ -1,10 +1,11 @@
 <?php 
     include_once('./DataBase.php');
-    $nombre=$_POST['nombre'];
 
-    $query='call set_marca('.$nombre.')';
     function consultar() {
-        echo $GLOBALS['query'];
+        $nombre=$_POST['nombre'];
+
+        $query='call set_marca("'.$nombre.'")';
+        $result = $GLOBALS['mysqli']->query($query);
     }
     consultar();
 ?>

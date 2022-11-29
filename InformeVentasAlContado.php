@@ -1,10 +1,11 @@
 <?php 
     include_once('./DataBase.php');
-    $mes=$_POST['mes'];
 
-    $query='call informe_ventas_al_contado('.$mes.')';
     function consultar() {
-        echo $GLOBALS['query'];
+        $mes=$_POST['mes'];
+
+        $query='call informe_ventas_al_contado("'.$mes.'")';
+        $result = $GLOBALS['mysqli']->query($query);
     }
     consultar();
 ?>

@@ -1,11 +1,12 @@
 <?php 
     include_once('./DataBase.php');
-    $mes=$_POST['mes'];
-    $cedula=$_POST['cedula'];
 
-    $query='call existencia_de_garantia('.$mes.','.$cedula.')';
     function consultar() {
-        echo $GLOBALS['query'];
+        $mes=$_POST['mes'];
+        $cedula=$_POST['cedula'];
+    
+        $query='call informe_equipos_vendidos_por_vendedor("'.$mes.'","'.$cedula.'")';
+        $result = $GLOBALS['mysqli']->query($query); 
     }
     consultar();
 ?>
