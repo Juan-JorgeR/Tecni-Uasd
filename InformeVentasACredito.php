@@ -7,10 +7,10 @@
         $query='call informe_ventas_a_credito("'.$mes.'")';
         $result = $GLOBALS['mysqli']->query($query);
 
-        $tabla="<table>";
+        $tabla="<!Doctype html><html><head><link rel=\"stylesheet\" href=\"css/style.css\"></head><table>";
 
         $tabla.="<th>";
-        $tabla.="<tr>";
+        $tabla.="<tr class=\"nombreCampos\">";
         $tabla.="<td>"."id_factura"."</td>";
         $tabla.="<td>"."Fecha"."</td>";
         $tabla.="<td>"."Cliente"."</td>";
@@ -33,7 +33,7 @@
             $tabla.="<td>".$row['garantia']."</td>";
             $tabla.="</tr>";
         }
-        $tabla.="</table>";
+        $tabla.="</table></html>";
 
         echo $tabla;
     }

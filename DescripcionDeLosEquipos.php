@@ -8,10 +8,10 @@
         $query='call descripcion_de_los_equipos("'.$nombre.'","'.$marca.'")';
         $result = $GLOBALS['mysqli']->query($query); 
 
-        $tabla="<table>";
+        $tabla="<!Doctype html><html><head><link rel=\"stylesheet\" href=\"css/style.css\"></head><table>";
 
         $tabla.="<th>";
-        $tabla.="<tr>";
+        $tabla.="<tr class=\"nombreCampos\">";
         $tabla.="<td>"."Nombre"."</td>";
         $tabla.="<td>"."Precio"."</td>";
         $tabla.="<td>"."Marca"."</td>";
@@ -30,7 +30,7 @@
             $tabla.="<td>".$row['garantia']."</td>";
             $tabla.="</tr>";
         }
-        $tabla.="</table>";
+        $tabla.="</table></htmlS";
         
         echo $tabla;
     }

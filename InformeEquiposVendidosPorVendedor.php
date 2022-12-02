@@ -8,10 +8,10 @@
         $query='call informe_equipos_vendidos_por_vendedor('.$mes.',"'.$cedula.'")';
         $result = $GLOBALS['mysqli']->query($query); 
 
-        $tabla="<table>";
+        $tabla="<!Doctype html><html><head><link rel=\"stylesheet\" href=\"css/style.css\"></head><table>";
 
         $tabla.="<th>";
-        $tabla.="<tr>";
+        $tabla.="<tr class=\"nombreCampos\">";
         $tabla.="<td>"."Vendedor"."</td>";
         $tabla.="<td>"."Fecha"."</td>";
         $tabla.="<td>"."Equipo"."</td>";
@@ -28,7 +28,7 @@
             $tabla.="<td>".$row['precio']."</td>";
             $tabla.="</tr>";
         }
-        $tabla.="</table>";
+        $tabla.="</table></html>";
 
         echo $tabla;
     }

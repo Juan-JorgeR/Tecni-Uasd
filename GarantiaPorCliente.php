@@ -7,10 +7,10 @@
         $query='call garantia_por_cliente("'.$cedula.'")';
         $result = $GLOBALS['mysqli']->query($query); 
 
-        $tabla="<table>";
+        $tabla="<!Doctype html><html><head><link rel=\"stylesheet\" href=\"css/style.css\"></head><table>";
 
         $tabla.="<th>";
-        $tabla.="<tr>";
+        $tabla.="<tr class=\"nombreCampos\">";
         $tabla.="<td>"."Cliente"."</td>";
         $tabla.="<td>"."Equipo"."</td>";
         $tabla.="<td>"."Marca"."</td>";
@@ -27,7 +27,7 @@
             $tabla.="<td>".$row['garantia']."</td>";
             $tabla.="</tr>";
         }
-        $tabla.="</table>";
+        $tabla.="</table></html>";
 
         echo $tabla;
     }
