@@ -202,6 +202,7 @@
                     <p><input name="proveedor" placeholder="Proveedor"></p>
                     <p><input name="marca" placeholder="Marca"></p>
                     <p><input name="garantia" placeholder="Garantia"></p>
+                    <p><textarea style="width: 300px; height:100px;" name="informacion_tecnica" placeholder="Informacion Tecnica"></textarea></p>
                     <input type="submit" value="Actualizar" class="actualizar">
                 </form>
                 <!--proveedor-->
