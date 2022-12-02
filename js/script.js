@@ -16,6 +16,11 @@ import Proveedor from './formularios/Proveedor.js';
 import Vendedor from './formularios/Vendedor.js';
 
 var formularios=document.querySelectorAll('form');
+var consultasOpc=document.getElementById('opc_consultas').getElementsByTagName('img');
+var informesOpc=document.getElementById('opc_informes').getElementsByTagName('img');
+var formulariosOpc=document.getElementById('opc_formularios').getElementsByTagName('img');
+
+var tres_rayas=document.getElementById('tres_rayas');
 var descripcionDeLosEquipos=document.getElementById('opc_descripcion_de_los_Equipos');
 var EstatusCuentasPC=document.getElementById('opc_estatus_cuentas_por_cobrar_a_credito');
 var existenciaDeGarantia=document.getElementById('opc_existencia_de_garantia');
@@ -49,6 +54,11 @@ var proveedorObj=new Proveedor();
 var vendedorObj=new Vendedor();
 var garantiaObj=new Garantia();
 var equipoObj=new Equipo();
+
+var menuVisible=false;
+var consultasVisible=false;
+var informesVisible=false;
+var formulariosVisible=false;
 
 function esconderTodosLosFormularios() {
     formularios.forEach(f=>{
@@ -119,7 +129,64 @@ function proveedorOnClick() {
     esconderTodosLosFormularios();
     proveedorObj.display();
 }
+function desplegarMenu() {
+    var menuOpc=document.getElementById("menuOpciones");
+    if(!menuVisible) {
+        menuOpc.style="width:450px;visibility:visible;";
+        consultasOpc.style="width: 300px;";
+        menuVisible=true;
+    }
+    else {
+        menuOpc.style="width:0px;visibility:hidden;";
+        menuVisible=false;
+    }
+    
+
+}
+function desplegarConsultas() {
+    var consultasSubopc=document.getElementById("sub_opc_consultas");
+    if(!consultasVisible) {
+        consultasSubopc.style="height:auto; visibility: visible;";
+        consultasOpc.item(0).style="transform: rotate(90deg);";
+        consultasVisible=true;
+    }
+    else {
+        consultasSubopc.style="height: 0; visibility: hidden;";
+        consultasOpc.item(0).style="transform: rotate(0deg);";
+        consultasVisible=false;
+    }
+}
+function desplegarInformes() {
+    var informesSubopc=document.getElementById("sub_opc_informes");
+    if(!informesVisible) {
+        informesSubopc.style="height:auto; visibility: visible;";
+        informesOpc.item(0).style="transform: rotate(90deg);";
+        informesVisible=true;
+    }
+    else {
+        informesSubopc.style="height: 0; visibility: hidden;";
+        informesOpc.item(0).style="transform: rotate(0deg);";
+        informesVisible=false;
+    }
+}
+function desplegarFormularios() {
+    var formulariosSubopc=document.getElementById("sub_opc_formularios");
+    if(!formulariosVisible) {
+        formulariosSubopc.style="height:auto; visibility: visible;";
+        formulariosOpc.item(0).style="transform: rotate(90deg);";
+        formulariosVisible=true;
+    }
+    else {
+        formulariosSubopc.style="height: 0; visibility: hidden;";
+        formulariosOpc.item(0).style="transform: rotate(0deg);";
+        formulariosVisible=false;
+    }
+}
 function crearEventos() {
+    tres_rayas.addEventListener("click",desplegarMenu);
+    consultasOpc.item(0).addEventListener("click",desplegarConsultas);
+    informesOpc.item(0).addEventListener("click",desplegarInformes);
+    formulariosOpc.item(0).addEventListener("click",desplegarFormularios);
     descripcionDeLosEquipos.addEventListener("click",descripcionDeLosEquiposOnClick);
     EstatusCuentasPC.addEventListener("click",estatusCuentasPorCobrarCreditoOnClick);
     existenciaDeGarantia.addEventListener("click",existenciaDeGarantiaOnClick);
@@ -137,6 +204,7 @@ function crearEventos() {
     equiposOpc.addEventListener("click",equipoOnClick);
     proveedorOpc.addEventListener("click",proveedorOnClick);
 }
+
 function inicializarSelects() {
     var mesesSelect=document.getElementsByName('meses');
     var mesesArray=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];

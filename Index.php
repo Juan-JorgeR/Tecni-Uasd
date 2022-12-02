@@ -168,7 +168,6 @@
                     <p><input name="cedula" placeholder="Cedula Cliente" id="factura_cedula_cliente"></p>
                     <p><input name="vendedor" placeholder="Vendedor"></p>
                     <p><input name="equipo" placeholder="Equipo"></p>
-                    <p><input name="monto" placeholder="Monto" id="factura_monto"></p>
                     <p><select name="tipoVenta">
                         <option value="">--Tipo Venta--</option>
                     </select></p>
