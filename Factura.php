@@ -10,6 +10,8 @@
     
         $query='call set_factura("'.$cedula.'","'.$vendedor.'","'.$equipo.'","'.$monto.'","'.$tipoVenta.'")';
         $result = $GLOBALS['mysqli']->query($query); 
+
+        echo "registro completado con exito";
     }
     consultar();
 ?>

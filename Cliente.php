@@ -9,6 +9,8 @@
         
         $query='call set_cliente("'.$nombre.'","'.$apellido.'","'.$cedula.'")';
         $result = $GLOBALS['mysqli']->query($query); 
+
+        echo "registro completado con exito";
     }
     consultar();
 ?>

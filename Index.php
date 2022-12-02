@@ -88,9 +88,7 @@
                 <form name="frm_descripcion_equipos" method="post" action="DescripcionDeLosEquipos.php" class="formulario" id="descripcion_equipos_form">
                     <p id="titulo">Descripcion De Los Equipos</p>
                     <p><input name="nombre" placeholder="Nombre" id="descripcion_equipos_nombre"></p>
-                    <p><select name="marca">
-                        <option value="">--Marca--</option>
-                    </select></p>
+                    <p><input name="marca" placeholder="Marca"></p>
                     <input type="submit" value="Actualizar" class="actualizar">
                 </form>
                 <!--Estatus cuentas por cobrar a credito-->
@@ -103,13 +101,11 @@
                 <form name="frm_existencia_de_garantia" method="post" action="ExistenciaDeGarantia.php" class="formulario" id="existencia_de_garantia_form">
                     <p id="titulo">Existencia De Garantia</p>
                     <p><input name="nombre" placeholder="Nombre" id="existencia_de_garantia_nombre"></p>
-                    <p><select name="marca">
-                        <option value="">--Marca--</option>
-                    </select></p>
+                    <p><input name="marca" placeholder="Marca"></p>
                     <input type="submit" value="Actualizar" class="actualizar">
                 </form>
                 <!--garantia por clientes-->
-                <form name="frm_garantia_por_clientes" method="post" action="GarantiaPorClientes.php" class="formulario" id="garantia_por_clientes_form">
+                <form name="frm_garantia_por_clientes" method="post" action="GarantiaPorCliente.php" class="formulario" id="garantia_por_clientes_form">
                     <p id="titulo">Garantia Por Cliente</p>
                     <p><input name="cedula" placeholder="Cedula" id="garantia_por_clientes_cedula"></p>
                     <input type="submit" value="Actualizar" class="actualizar">
@@ -118,9 +114,7 @@
                 <form name="frm_informacion_tecnica_del_producto" method="post" action="InformacionTecnicaDelProducto.php" class="formulario" id="informacion_tecnica_del_producto_form">
                     <p id="titulo">Informacion Tecnica Del Producto</p>
                     <p><input name="nombre" placeholder="Nombre" id="informacion_tecnica_del_producto_nombre"></p>
-                    <p><select name="marca">
-                        <option value="">--Marca--</option>
-                    </select></p>
+                    <p><input name="marca" placeholder="Marca"></p>
                     <input type="submit" value="Actualizar" class="actualizar">
                 </form>
 
@@ -131,11 +125,11 @@
                     <p><select name="meses">
                         <option value="">--Meses--</option>
                     </select></p>
-                    <p><input placeholder="Cedula" id="informe_equipos_vendidos_por_vendedor_cedula"></p>
+                    <p><input name="cedula" placeholder="Cedula" id="informe_equipos_vendidos_por_vendedor_cedula"></p>
                     <input type="submit" value="Actualizar" class="actualizar">
                 </form>
                 <!--Informe facturas mensuales-->
-                <form name="frm_informe_facturas_mensuales" method="post" action="InformeFacturasMensuales.php" class="formulario" id="informe_facturas_mensuales_form">
+                <form name="frm_informe_facturas_mensuales" method="post" action="InformesFacturasMensuales.php" class="formulario" id="informe_facturas_mensuales_form">
                     <p id="titulo">Informe Facturas Mensuales</p>
                     <p><select name="meses">
                         <option value="">--Meses--</option>
@@ -143,7 +137,7 @@
                     <input type="submit" value="Actualizar" class="actualizar">
                 </form>
                 <!--Informes ventas al contado-->
-                <form name="frm_informes_ventas_al_contado" method="post" action="InformesVentasAlContado.php" class="formulario" id="informes_ventas_al_contado_form">
+                <form name="frm_informes_ventas_al_contado" method="post" action="InformeVentasAlContado.php" class="formulario" id="informes_ventas_al_contado_form">
                     <p id="titulo">Informe Ventas Al Contado</p>  
                     <p><select name="meses">
                         <option value="">--Meses--</option>
@@ -172,12 +166,8 @@
                 <form name="frm_factura" method="post" action="Factura.php" class="formulario" id="factura_form">
                     <p id="titulo">Factura</p> 
                     <p><input name="cedula" placeholder="Cedula Cliente" id="factura_cedula_cliente"></p>
-                    <p><select name="vendedor">
-                        <option value="">--Vendedor--</option>
-                    </select></p>
-                    <p><select name="equipo">
-                        <option value="">--Equipo--</option>
-                    </select></p>
+                    <p><input name="vendedor" placeholder="Vendedor"></p>
+                    <p><input name="equipo" placeholder="Equipo"></p>
                     <p><input name="monto" placeholder="Monto" id="factura_monto"></p>
                     <p><select name="tipoVenta">
                         <option value="">--Tipo Venta--</option>
@@ -210,15 +200,9 @@
                     <p id="titulo">Equipos</p> 
                     <p><input name="nombre" placeholder="Nombre" id="equipos_nombre"></p>
                     <p><input name="precio" placeholder="Precio" id="equipos_precio"></p>
-                    <p><select name="proveedor">
-                        <option value="">--Proveedor--</option>
-                    </select></p>
-                    <p><select name="marca">
-                        <option value="">--Marca--</option>
-                    </select></p>
-                    <p><select name="garantia">
-                        <option value="">--garantia--</option>
-                    </select></p>
+                    <p><input name="proveedor" placeholder="Proveedor"></p>
+                    <p><input name="marca" placeholder="Marca"></p>
+                    <p><input name="garantia" placeholder="Garantia"></p>
                     <input type="submit" value="Actualizar" class="actualizar">
                 </form>
                 <!--proveedor-->

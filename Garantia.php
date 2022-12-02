@@ -6,6 +6,8 @@
 
         $query='call set_garantia("'.$meses.'")';
         $result = $GLOBALS['mysqli']->query($query); 
+
+        echo "registro completado con exito";
     }
     consultar();
 ?>

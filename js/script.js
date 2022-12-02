@@ -138,123 +138,19 @@ function crearEventos() {
     proveedorOpc.addEventListener("click",proveedorOnClick);
 }
 function inicializarSelects() {
-    var context=new FormData();
-    context.append('context','initSelects');
-
-    var marcas = new XMLHttpRequest();
-    var proveedores = new XMLHttpRequest();
-    var vendedores = new XMLHttpRequest();
-    var garantias = new XMLHttpRequest();
-    var equipos = new XMLHttpRequest();
-
-    marcas.open("POST", "./mvc/views/MarcaView.php", true);
-    marcas.addEventListener('load', () => {
-        
-        var marcasSelect=document.getElementsByName('marca');
-
-        var result=JSON.parse(marcas.responseText);
-        for(var i=0;i<marcasSelect.length;i++) {
-            for(var j=0;j<result.length;j++) {
-                var option=document.createElement('option');
-                option.setAttribute('value',result[j]);
-                option.appendChild(document.createTextNode(result[j]));
-                marcasSelect[i].appendChild(option);
-            }
-        }
-        console.log(result);
-        
-    },false);
-    marcas.send(context);
-
-    proveedores.open("POST", "./mvc/views/ProveedorView.php", true);
-    proveedores.addEventListener('load', () => {
-
-        var proveedoresSelect=document.getElementsByName('proveedor');
-
-        var result=JSON.parse(proveedores.responseText);
-        for(var i=0;i<proveedoresSelect.length;i++) {
-            for(var j=0;j<result.length;j++) {
-                var option=document.createElement('option');
-                option.setAttribute('value',result[j]);
-                option.appendChild(document.createTextNode(result[j]));
-                proveedoresSelect[i].appendChild(option);
-            }
-        }
-        console.log(result);
-        
-    },false);
-    proveedores.send(context);
-
-    vendedores.open("POST", "./mvc/views/VendedorView.php", true);
-    vendedores.addEventListener('load', () => {
-        
-        var vendedoresSelect=document.getElementsByName('vendedor');
-
-        var result=JSON.parse(vendedores.responseText);
-        for(var i=0;i<vendedoresSelect.length;i++) {
-            for(var j=0;j<result.length;j++) {
-                var option=document.createElement('option');
-                option.setAttribute('value',result[j]);
-                option.appendChild(document.createTextNode(result[j]));
-                vendedoresSelect[i].appendChild(option);
-            }
-        }
-        console.log(result);
-        
-    },false);
-    vendedores.send(context);
-
-    garantias.open("POST", "./mvc/views/GarantiaView.php", true);
-    garantias.addEventListener('load', () => {
-        
-        var garantiasSelect=document.getElementsByName('garantia');
-
-        var result=JSON.parse( garantias.responseText);
-        for(var i=0;i<garantiasSelect.length;i++) {
-            for(var j=0;j<result.length;j++) {
-                var option=document.createElement('option');
-                option.setAttribute('value',result[j]);
-                option.appendChild(document.createTextNode(result[j]));
-                garantiasSelect[i].appendChild(option);
-            }
-        }
-        console.log(result);
-        
-    },false);
-    garantias.send(context);
-
-    equipos.open("POST", "./mvc/views/EquipoView.php", true);
-    equipos.addEventListener('load', () => {
-        
-        var equiposSelect=document.getElementsByName('equipo');
-
-        var result=JSON.parse( equipos.responseText);
-        for(var i=0;i<equiposSelect.length;i++) {
-            for(var j=0;j<result.length;j++) {
-                var option=document.createElement('option');
-                option.setAttribute('value',result[j]);
-                option.appendChild(document.createTextNode(result[j]));
-                equiposSelect[i].appendChild(option);
-            }
-        }
-        console.log(result);
-        
-    },false);
-    equipos.send(context);
-
     var mesesSelect=document.getElementsByName('meses');
     var mesesArray=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
     for(var i=0;i<mesesSelect.length;i++) {
         for(var j=0;j<12;j++) {
             var option=document.createElement('option');
-            option.setAttribute('value',mesesArray[j]);
+            option.setAttribute('value',j+1);
             option.appendChild(document.createTextNode(mesesArray[j]));
             mesesSelect[i].appendChild(option);
         }
     }
     
     var tipoVentaSelect=document.getElementsByName('tipoVenta');
-    var tipoVentaArray=['Contado','Crédito'];
+    var tipoVentaArray=['Contado','Credito'];
     for(var i=0;i<tipoVentaSelect.length;i++) {
         for(var j=0;j<2;j++) {
             var option=document.createElement('option');

@@ -10,6 +10,8 @@
     
         $query='call set_equipo("'.$nombre.'","'.$precio.'","'.$proveedor.'","'.$marca.'","'.$garantia.'")';
         $result = $GLOBALS['mysqli']->query($query); 
+
+        echo "registro completado con exito";
     }
     consultar();
 ?>

@@ -6,6 +6,8 @@
 
         $query='call set_marca("'.$nombre.'")';
         $result = $GLOBALS['mysqli']->query($query);
+
+        echo "registro completado con exito";
     }
     consultar();
 ?>
