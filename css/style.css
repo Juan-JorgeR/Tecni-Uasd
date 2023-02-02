@@ -9,7 +9,10 @@
 }
 body {
     font-family: 'Poppins', sans-serif;
+    display: grid;
 }
+
+ul#opc_menu {}
 .hero {
     width: 100%;
     height: 100px;
@@ -17,13 +20,13 @@ body {
     display: grid;
     grid-template-rows: 100px 1fr;
     color: #fff;
+    justify_self: start;
 }
 
 .container {
     width: 600px;
     max-width: 1200px;
     margin: 0 auto;
-    overflow: hidden;
     padding: var(--padding-container);
     flex: 1 1 75%;
     order: 2;
@@ -47,12 +50,15 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
-    position: absolute;
+    position: relative;
+    overflow: auto;
+    justify_self: stretch;
 }
 #menuOpciones {
     background-color: rgb(0 0 0);
     height: 100%;
-    flex: 1 1 25%;
+    align_self: start;
+    flex: 1 1 0%;
     order: 1;
     visibility: hidden;
     transition-property: flex;
@@ -103,7 +109,7 @@ body {
     width: 600px;
     height: auto;
     text-align: center;
-    margin: 2em auto 2em auto;
+    margin: 2em 15% 2em 15%;
     visibility: hidden;
     position: absolute;
 }
