@@ -131,14 +131,22 @@ function proveedorOnClick() {
 }
 function desplegarMenu() {
     var menuOpc=document.getElementById("menuOpciones");
+    var opcionesMenu=document.querySelectorAll(".opciones_menu");
+    var container=document.querySelector("section.container");
     if(!menuVisible) {
-        menuOpc.style="width:450px;visibility:visible;";
+        menuOpc.style="flex: 1 1 25%; visibility: visible;";
+        opcionesMenu.style="visibility: visible;";
         consultasOpc.style="width: 300px;";
+        container.style="flex: 1 1 75%;";
         menuVisible=true;
+        console.log("Se desplego menu");
     }
     else {
-        menuOpc.style="width:0px;visibility:hidden;";
+        menuOpc.style="flex: 1 1 0%; visibility:hidden;";
+        opcionesMenu.style="visibility: hidden;";
+        container.style="flex: 1 1 100%;";
         menuVisible=false;
+        console.log("Se contrajo menu");
     }
     
 

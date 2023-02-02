@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header id="encabezado">
+        <header class="hero">
             <nav id="barraSuperior">
                 <img id="tres_rayas" src="./images/tres_rayas.png">
                 <label id="tituloBarraSuperior">Tecni-uasd</label>
@@ -82,7 +82,7 @@
                     </ul>
                 </ul>
             </aside>
-            <section id="seccion_principal">
+            <section class="container">
                 <!--Consultas-->
                 <!--descripcion equipos-->
                 <form name="frm_descripcion_equipos" method="post" action="DescripcionDeLosEquipos.php" class="formulario" id="descripcion_equipos_form">
